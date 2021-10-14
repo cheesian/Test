@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="driveit">driveit</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="login">Login</string>
 </resources>

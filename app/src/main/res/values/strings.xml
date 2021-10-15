@@ -11,5 +11,9 @@
     <string name="settings">Settings</string>
     <string name="search">Search</string>
     <string name="account">Account</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="name_required">Your name is required</string>
+    <string name="password_required">Your password is required</string>
+    <string name="reset_password_message">You will receive an OTP to reset your password</string>
     <string name="title_notifications">Notifications</string>
 </resources>

@@ -2,7 +2,7 @@
     <string name="app_name">Test</string>
     <string name="driveit">driveit</string>
     <string name="forgot_password">Forgot password?</string>
-    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_name">Enter your full name</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="login">Login</string>
     <string name="title_activity_home">MainActivity</string>
@@ -10,6 +10,10 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="settings">Settings</string>
     <string name="search">Search</string>
+    <string name="login_success">Login success</string>
+    <string name="login_failed">Login failed</string>
+    <string name="network_error">Check your connection and try again.</string>
+    <string name="unknown_error">Something went wrong. Please try again later.</string>
     <string name="account">Account</string>
     <string name="dismiss">Dismiss</string>
     <string name="name_required">Your name is required</string>

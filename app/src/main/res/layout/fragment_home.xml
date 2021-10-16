@@ -8,9 +8,9 @@
     </data>
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -18,18 +18,18 @@
             tools:context=".ui.home.HomeFragment">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/card"
-                app:layout_constraintTop_toTopOf="parent"
+                android:elevation="5dp"
                 app:cardCornerRadius="@dimen/box_radius"
-                android:elevation="5dp">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_card"
                     android:layout_width="match_parent"
-                    android:paddingBottom="20dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/constraint_card">
+                    android:paddingBottom="20dp">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/profile_picture"
@@ -43,169 +43,176 @@
                         app:srcCompat="@drawable/man" />
 
                     <TextView
+                        android:id="@+id/currency_type"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/currency_type"
-                        android:text="@string/aed"
-                        android:textSize="@dimen/normal_text_size"
                         android:layout_marginStart="100dp"
                         android:layout_marginEnd="10dp"
+                        android:text="@string/aed"
+                        android:textSize="@dimen/normal_text_size"
                         app:layout_constraintBaseline_toBaselineOf="@id/amount"
                         app:layout_constraintEnd_toStartOf="@id/amount"/>
 
                     <TextView
+                        android:id="@+id/amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/amount"
+                        android:layout_marginEnd="10dp"
                         android:text="@string/sample_amount"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/big_text_size"
                         android:textStyle="bold"
-                        app:layout_constraintTop_toTopOf="@id/profile_picture"
                         app:layout_constraintBottom_toBottomOf="@id/profile_picture"
-                        android:layout_marginEnd="10dp"
-                        app:layout_constraintEnd_toStartOf="@id/plus" />
+                        app:layout_constraintEnd_toStartOf="@id/plus"
+                        app:layout_constraintTop_toTopOf="@id/profile_picture" />
 
                     <Button
                         android:id="@+id/plus"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:backgroundTint="@color/purple_700"
-                        android:background="@drawable/ic_baseline_add_box_24"
-                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginEnd="25dp"
-                        app:layout_constraintTop_toTopOf="@id/profile_picture"
-                        app:layout_constraintBottom_toBottomOf="@id/profile_picture" />
+                        android:background="@drawable/ic_baseline_add_box_24"
+                        android:backgroundTint="@color/purple_700"
+                        app:layout_constraintBottom_toBottomOf="@id/profile_picture"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/profile_picture" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/car_picture"
                         android:layout_width="match_parent"
                         android:layout_height="250dp"
-                        android:scaleType="centerInside"
                         android:layout_margin="25dp"
                         android:layout_marginTop="25dp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerInside"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/profile_picture"
                         app:srcCompat="@drawable/porsche" />
 
                     <TextView
+                        android:id="@+id/vehicle_type"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/vehicle_type"
+                        android:layout_marginEnd="10dp"
                         android:text="@string/civic_type"
                         android:textSize="@dimen/big_text_size"
                         android:textStyle="bold"
-                        app:layout_constraintTop_toBottomOf="@id/car_picture"
-                        android:layout_marginEnd="10dp"
-                        app:layout_constraintStart_toStartOf="@id/car_picture"/>
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@id/car_picture"
+                        app:layout_constraintTop_toBottomOf="@id/car_picture"/>
 
                     <TextView
+                        android:id="@+id/vehicle_brand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/vehicle_brand"
                         android:text="@string/honda"
                         android:textSize="@dimen/normal_text_size"
                         app:layout_constraintStart_toStartOf="@id/vehicle_type"
                         app:layout_constraintTop_toBottomOf="@id/vehicle_type"/>
 
                     <TextView
+                        android:id="@+id/garage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/garage"
                         android:text="@string/my_garage"
                         android:textSize="@dimen/normal_text_size"
+                        android:textColor="@color/purple_700"
                         android:textStyle="bold"
-                        app:layout_constraintTop_toTopOf="@id/vehicle_type"
+                        android:drawableTint="@color/purple_700"
+                        app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24"
                         app:layout_constraintBottom_toBottomOf="@id/vehicle_brand"
                         app:layout_constraintEnd_toEndOf="@id/car_picture"
-                        app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24" />
+                        app:layout_constraintTop_toTopOf="@id/vehicle_type" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_available_cars"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/card"
+                android:layout_margin="10dp"
                 android:background="@drawable/rounded_rectangle"
                 android:backgroundTint="@color/purple_700"
                 android:padding="15dp"
-                android:layout_margin="10dp"
-                android:id="@+id/constraint_available_cars">
+                app:layout_constraintTop_toBottomOf="@id/card">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/available_cars"
-                    android:text="@string/available_cars"
-                    android:textSize="@dimen/big_text_size"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="10dp"
-                    app:layout_constraintStart_toStartOf="parent"/>
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/available_cars"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/big_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
                     android:id="@+id/terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/long_short_term"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/normal_text_size"
-                    app:layout_constraintTop_toBottomOf="@id/available_cars"
-                    app:layout_constraintStart_toStartOf="@id/available_cars"/>
+                    app:layout_constraintStart_toStartOf="@id/available_cars"
+                    app:layout_constraintTop_toBottomOf="@id/available_cars"/>
 
                 <Button
                     android:id="@+id/button_available_cars"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/ic_baseline_arrow_forward_24"
-                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="25dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    android:background="@drawable/ic_baseline_arrow_forward_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/constraint_recycler"
-                android:layout_marginTop="30dp"
-                app:layout_constraintTop_toBottomOf="@id/constraint_available_cars"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp">
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/constraint_available_cars">
 
                 <TextView
+                    android:id="@+id/top_deals"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/top_deals"
+                    android:layout_marginEnd="10dp"
                     android:text="@string/top_deals"
                     android:textSize="@dimen/big_text_size"
                     android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="10dp"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
+                    android:id="@+id/more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/more"
                     android:text="@string/more"
                     android:textSize="@dimen/normal_text_size"
                     android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:drawableTint="@color/purple_700"
+                    android:textColor="@color/purple_700"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/recycler"
+                    android:scrollbars="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/top_deals"
-                    android:scrollbars="horizontal" />
+                    tools:listitem="@layout/garage_list_item" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

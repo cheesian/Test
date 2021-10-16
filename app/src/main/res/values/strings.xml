@@ -29,4 +29,6 @@
     <string name="more">More</string>
     <string name="top_deals">TOP DEALS</string>
     <string name="sample_amount">2,450</string>
+    <string name="weekly">Weekly</string>
+    <string name="per_day">Per day</string>
 </resources>

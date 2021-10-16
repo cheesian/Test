@@ -97,7 +97,7 @@ class HomeFragment : Fragment() {
             image = R.drawable.porsche,
             brand = "Porsche",
             amount = "AED 420",
-            perTime = "Per week"
+            perTime = "Per day"
         )
         val car2 = Car(
             time = "Weekly",
@@ -111,7 +111,7 @@ class HomeFragment : Fragment() {
             image = R.drawable.lambo,
             brand = "Lamborghini",
             amount = "AED 450",
-            perTime = "Per week"
+            perTime = "Per month"
         )
         carList.add(car1)
         carList.add(car2)

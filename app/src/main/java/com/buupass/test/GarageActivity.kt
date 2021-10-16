@@ -30,7 +30,14 @@ class GarageActivity : AppCompatActivity() {
         )
         recyclerView.adapter = carAdapter
         carAdapter.setItems(carList)
+        setOnClicks()
         setContentView(binding.root)
+    }
+
+    private fun setOnClicks() {
+        backButton.setOnClickListener {
+            super.onBackPressed()
+        }
     }
 
     private fun generateList() {
